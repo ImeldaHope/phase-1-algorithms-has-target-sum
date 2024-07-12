@@ -1,5 +1,13 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i = 0; i < array.length; i++){
+    for(let j= i + 1; j < array.length; j++){
+      if((array[i]+array[j]) === target){
+        return true;
+      }      
+    }
+  }
+  return false;
 }
 
 /* 
@@ -8,10 +16,16 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  Getting two inputs: an array and an integer value. 
+  The function returns true if the same of any elements within the array matches the integer value.
+  Make use of nested loop to find matching value.
 */
 
 /*
   Add written explanation of your solution here
+  Check the first two values with values assigned to two separate variables.
+  If true, end loop. Otherwise, move to the next element by increasing the value of the index by 1 after each iteration.
+  Check array length to break loop.
 */
 
 // You can run `node index.js` to view these console logs
